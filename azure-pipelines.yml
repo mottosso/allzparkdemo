@@ -20,7 +20,6 @@ trigger:
 
 
 jobs:
-
   # -----------------------------------------------------------------------
   #
   # Test
@@ -48,7 +47,12 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
-          python -m allzparkdemo.build --clean
+          pip install --upgrade pip
+          pip install .
+          rez bind --quickstart
+        displayName: "setup"
+      - script: |
+          python -u -m allzparkdemo.build --clean
         displayName: "build"
 
 
@@ -69,7 +73,12 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
-          python -m allzparkdemo.build --clean
+          pip install --upgrade pip
+          pip install .
+          rez bind --quickstart
+        displayName: "setup"
+      - script: |
+          python -u -m allzparkdemo.build --clean
         displayName: "build"
 
   - job: Windows
@@ -88,9 +97,13 @@ jobs:
           versionSpec: "$(python.version)"
         displayName: "Use Python $(python.version)"
       - powershell: |
-          python -m allzparkdemo.build --clean
+          pip install --upgrade pip
+          pip install .
+          rez bind --quickstart
+        displayName: "setup"
+      - script: |
+          python -u -m allzparkdemo.build --clean
         displayName: "build"
-
 
   # -----------------------------------------------------------------------
   #
@@ -99,7 +112,7 @@ jobs:
   # -----------------------------------------------------------------------
 
   - job: Deploy
-    condition: startsWith(variables["Build.SourceBranch"], "refs/tags")
+    condition: startsWith(variables['Build.SourceBranch'], 'refs/tags')
     pool:
       vmImage: "ubuntu-latest"
     strategy:

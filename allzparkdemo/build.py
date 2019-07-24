@@ -12,6 +12,11 @@ repodir = os.path.dirname(dirname)
 dev_path = os.path.join(dirname, "dev")
 packages_path = os.path.join(dirname, "packages")
 
+os.environ["REZ_PACKAGES_PATH"] = os.pathsep.join([
+    os.path.expanduser("~/packages"),
+    packages_path,
+])
+
 # Some packages depend on other packages
 # having been built first.
 order = [
