@@ -1,0 +1,9 @@
+build
+dist
+*.pyc
+*.egg-info
+__pycache__
+packages/**
+!packages/README.md
+
+rez-internal-example

@@ -1,0 +1,68 @@
+{
+    "resolved_packages": [
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\.packages",
+                "name": "ftrack",
+                "version": "1.0.0",
+                "index": null,
+                "repository_type": "filesystem"
+            }
+        },
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\.packages",
+                "name": "gitlab",
+                "version": "1.1.2",
+                "index": null,
+                "repository_type": "filesystem"
+            }
+        }
+    ],
+    "serialize_version": "4.3",
+    "patch_locks": {},
+    "package_orderers": null,
+    "package_filter": [],
+    "graph": "{'nodes': dict_items([((('fillcolor', '#FFFFAA'), ('fontsize', 10), ('style', 'filled,dashed')), [('_1', 'ftrack-1'), ('_2', 'gitlab-1'), ('_3', '~platform==windows'), ('_4', '~arch==AMD64'), ('_5', '~os==windows-10')]), ((('fillcolor', '#AAFFAA'), ('fontsize', 10), ('style', 'filled')), [('_6', 'ftrack-1.0.0[]'), ('_7', 'gitlab-1.1.2[]')])]), 'edges': dict_items([((('arrowsize', '0.5'),), [('_1', '_6'), ('_2', '_7')])])}",
+    "timestamp": 1563997381,
+    "requested_timestamp": null,
+    "building": true,
+    "caching": true,
+    "implicit_packages": [
+        "~platform==windows",
+        "~arch==AMD64",
+        "~os==windows-10"
+    ],
+    "package_requests": [
+        "ftrack-1",
+        "gitlab-1"
+    ],
+    "package_paths": [
+        "C:\\Users\\manima/packages",
+        "C:\\Users\\manima/.packages",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\int",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\ext",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\td",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\proj",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\app"
+    ],
+    "default_patch_lock": "no_lock",
+    "rez_version": "2.38.2",
+    "rez_path": "C:\\Users\\manima\\packages\\rez\\2.38.2\\python\\rez",
+    "user": "manima",
+    "host": "toy",
+    "platform": "windows",
+    "arch": "AMD64",
+    "os": "windows-10",
+    "created": 1563997381,
+    "parent_suite_path": null,
+    "suite_context_name": null,
+    "status": "solved",
+    "failure_description": null,
+    "from_cache": true,
+    "solve_time": 0.0,
+    "load_time": 0.0,
+    "num_loaded_packages": 0
+}

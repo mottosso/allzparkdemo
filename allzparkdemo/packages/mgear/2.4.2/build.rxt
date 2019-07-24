@@ -1,0 +1,88 @@
+{
+    "resolved_packages": [
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\packages",
+                "name": "platform",
+                "version": "windows",
+                "index": null,
+                "repository_type": "filesystem"
+            }
+        },
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\packages",
+                "name": "arch",
+                "version": "AMD64",
+                "index": null,
+                "repository_type": "filesystem"
+            }
+        },
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\packages",
+                "name": "python",
+                "version": "3.7.3",
+                "index": 0,
+                "repository_type": "filesystem"
+            }
+        },
+        {
+            "key": "filesystem.variant",
+            "variables": {
+                "location": "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\int",
+                "name": "rezutil",
+                "version": "1.3.2",
+                "index": null,
+                "repository_type": "filesystem"
+            }
+        }
+    ],
+    "serialize_version": "4.3",
+    "patch_locks": {},
+    "package_orderers": null,
+    "package_filter": [],
+    "graph": "{'nodes': dict_items([((('fillcolor', '#FFFFAA'), ('fontsize', 10), ('style', 'filled,dashed')), [('_1', '~maya-2016+<2019'), ('_2', 'rezutil-1'), ('_3', '~platform==windows'), ('_4', '~arch==AMD64'), ('_5', '~os==windows-10')]), ((('fillcolor', '#AAFFAA'), ('fontsize', 10), ('style', 'filled')), [('_6', 'platform-windows[]'), ('_7', 'arch-AMD64[]'), ('_8', 'python-3.7.3[0]'), ('_9', 'rezutil-1.3.2[]')]), ((('fillcolor', '#F6F6F6'), ('fontsize', 10), ('style', 'filled,dashed')), [('_10', 'platform-windows'), ('_11', 'arch-AMD64'), ('_12', 'python-2.7+<4')])]), 'edges': dict_items([((('arrowsize', '0.5'),), [('_2', '_9'), ('_3', '_6'), ('_4', '_7'), ('_8', '_11'), ('_8', '_10'), ('_9', '_12'), ('_10', '_6'), ('_11', '_7'), ('_12', '_8')])])}",
+    "timestamp": 1563997404,
+    "requested_timestamp": null,
+    "building": true,
+    "caching": true,
+    "implicit_packages": [
+        "~platform==windows",
+        "~arch==AMD64",
+        "~os==windows-10"
+    ],
+    "package_requests": [
+        "~maya-2016+<2019",
+        "rezutil-1"
+    ],
+    "package_paths": [
+        "C:\\Users\\manima/packages",
+        "C:\\Users\\manima/.packages",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\int",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\ext",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\td",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\proj",
+        "C:\\Users\\manima\\Dropbox\\dev\\anima\\github\\mottosso\\rez-for-projects\\packages\\app"
+    ],
+    "default_patch_lock": "no_lock",
+    "rez_version": "2.38.2",
+    "rez_path": "C:\\Users\\manima\\packages\\rez\\2.38.2\\python\\rez",
+    "user": "manima",
+    "host": "toy",
+    "platform": "windows",
+    "arch": "AMD64",
+    "os": "windows-10",
+    "created": 1563997404,
+    "parent_suite_path": null,
+    "suite_context_name": null,
+    "status": "solved",
+    "failure_description": null,
+    "from_cache": true,
+    "solve_time": 0.023000240325927734,
+    "load_time": 0.0,
+    "num_loaded_packages": 0
+}
