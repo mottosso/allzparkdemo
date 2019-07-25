@@ -34,7 +34,7 @@ for base, dirs, files in os.walk(packagedir):
 
 setup(
     name="allzparkdemo",
-    version="1.0.0",
+    version="1.0.1",
     description=__doc__,
     keywords="example files allzpark package manager application launcher",
     long_description=__doc__,
@@ -48,8 +48,6 @@ setup(
         "allzparkdemo": package_data
     },
     classifiers=classifiers,
-    install_requires=[
-        "allzpark>=1.2",
-    ],
+    install_requires=[],
     python_requires=">2.7, <4",
 )
