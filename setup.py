@@ -34,7 +34,7 @@ for base, dirs, files in os.walk(packagedir):
 
 setup(
     name="allzparkdemo",
-    version="1.0.4",
+    version="1.0.5",
     description=__doc__,
     keywords="example files allzpark package manager application launcher",
     long_description=__doc__,
@@ -51,5 +51,10 @@ setup(
     install_requires=[
         "bleeding-rez",
     ],
+    entry_points={
+        "console_scripts": [
+            "allzparkdemo = allzparkdemo.__main__:main"
+        ]
+    },
     python_requires=">2.7, <4",
 )
