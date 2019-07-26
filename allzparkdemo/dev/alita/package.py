@@ -22,7 +22,6 @@ _requires = {
         "~dev_maya2",  # hidden
         "~nuke==11.3.5",
         "~terminal==1.4.0",
-        "~texteditor==2.1.1",
     ],
 
     # Requirements relative a request

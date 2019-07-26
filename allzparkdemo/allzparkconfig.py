@@ -39,6 +39,5 @@ applications = [
     "houdini",
     "nuke",
     "aftereffects",
-    "texteditor",
     "terminal",
 ]
