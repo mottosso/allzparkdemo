@@ -30,4 +30,4 @@ def commands():
     else:
         # Making some assumptions here
         # TODO: Bullet proof this
-        alias("blender", "nano {root}/resources/readme.txt")
+        alias("blender", "gedit {root}/resources/readme.txt")
