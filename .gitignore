@@ -1,0 +1,9 @@
+build
+dist
+*.pyc
+*.egg-info
+__pycache__
+allzparkdemo/packages/**
+!allzparkdemo/packages/README.md
+
+rez-internal-example
