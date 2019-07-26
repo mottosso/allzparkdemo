@@ -47,7 +47,6 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
-          pip install --upgrade pip
           pip install .
           rez bind --quickstart
         displayName: "setup"
@@ -73,7 +72,6 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
-          pip install --upgrade pip
           pip install .
           rez bind --quickstart
         displayName: "setup"
@@ -97,7 +95,6 @@ jobs:
           versionSpec: "$(python.version)"
         displayName: "Use Python $(python.version)"
       - powershell: |
-          pip install --upgrade pip
           pip install .
           rez bind --quickstart
         displayName: "setup"
@@ -127,7 +124,6 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
-          pip install --upgrade pip
           pip install .
           rez bind --quickstart
         displayName: "setup"
