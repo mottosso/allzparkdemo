@@ -127,6 +127,16 @@ jobs:
         displayName: "Use Python $(python.version)"
 
       - script: |
+          pip install --upgrade pip
+          pip install .
+          rez bind --quickstart
+        displayName: "setup"
+
+      - script: |
+          python -u -m allzparkdemo.build --clean
+        displayName: "build"
+
+      - script: |
           pip install wheel twine
           python setup.py sdist bdist_wheel
           echo [distutils] > ~/.pypirc
