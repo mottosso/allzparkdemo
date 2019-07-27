@@ -16,13 +16,6 @@ def projects():
 
     demo_projects = [
         "alita",
-        "lotr",
-        "godzilla",
-        "panzerkunst",
-        "spiderman",
-        "vector",
-        "hulk",
-        "metroid",
     ]
 
     user_projects = os.getenv("MY_PROJECTS", "").split(",")
