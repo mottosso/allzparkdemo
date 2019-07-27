@@ -5,8 +5,8 @@ requires = [
     "base-1",
 
     # DCCs
-    "~maya-2018|2019",
-    "~nuke-9",
+    "~maya==2018.0.6|==2019.0.0",
+    "~nuke==11.3.5",
 ]
 
 build_command = "python -m rezutil build {root}"
