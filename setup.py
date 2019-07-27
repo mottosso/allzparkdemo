@@ -2,6 +2,7 @@
 
 import os
 from setuptools import setup, find_packages
+from allzparkdemo.version import version
 
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -32,9 +33,16 @@ for base, dirs, files in os.walk(packagedir):
         package_data += [fname]
 
 
+# Store version alongside package
+dirname = os.path.dirname(__file__)
+fname = os.path.join(dirname, "allzparkdemo", "__version__.py")
+with open(fname, "w") as f:
+    f.write("version = \"%s\"\n" % version)
+
+
 setup(
     name="allzparkdemo",
-    version="1.0.5",
+    version=version,
     description=__doc__,
     keywords="example files allzpark package manager application launcher",
     long_description=__doc__,
