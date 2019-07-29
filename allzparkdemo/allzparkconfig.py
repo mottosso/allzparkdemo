@@ -18,7 +18,7 @@ def profiles():
         "alita",
     ]
 
-    user_profiles = os.getenv("MY_PROJECTS", "").split(",")
+    user_profiles = os.getenv("MY_PROFILES", "").split(",")
 
     return user_profiles + demo_profiles
 
