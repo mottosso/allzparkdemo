@@ -16,6 +16,10 @@ def profiles():
 
     demo_profiles = [
         "alita",
+        "lotr",
+        "test_noexist",
+        "test_noapps",
+        "test_badapps",
     ]
 
     user_profiles = os.getenv("MY_PROFILES", "").split(",")

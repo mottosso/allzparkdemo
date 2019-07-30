@@ -1,8 +1,8 @@
 # An example of a package referencing something from outside
 # of the local package.
 
-name = "dev_maya"
-version = "2018.1.0"
+name = "maya"
+version = "2018.0.6"
 requires = []
 
 build_command = "python -m rezutil build {root}"
@@ -20,7 +20,6 @@ tools = [
 _data = {
     "label": "Autodesk Maya",
     "color": "#251",
-    "hidden": True,
     "icon": "{root}/resources/icon_256x256.png",
 }
 
