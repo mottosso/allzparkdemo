@@ -23,8 +23,13 @@ classifiers = [
 here = os.path.dirname(__file__)
 packagedir = os.path.abspath(os.path.join(here, "allzparkdemo"))
 
+exclude = [
+    "__pycache__",
+]
+
 package_data = []
 for base, dirs, files in os.walk(packagedir):
+    dirs[:] = [d for d in dirs if d not in exclude]
     relpath = os.path.relpath(base, packagedir)
     basename = os.path.basename(base)
 
@@ -32,13 +37,11 @@ for base, dirs, files in os.walk(packagedir):
         fname = os.path.join(relpath, fname)
         package_data += [fname]
 
-
 # Store version alongside package
 dirname = os.path.dirname(__file__)
 fname = os.path.join(dirname, "allzparkdemo", "__version__.py")
 with open(fname, "w") as f:
     f.write("version = \"%s\"\n" % version)
-
 
 setup(
     name="allzparkdemo",
@@ -51,7 +54,7 @@ setup(
     author_email="konstruktion@gmail.com",
     license="The Unlicense",
     zip_safe=False,
-    packages=find_packages(),
+    packages=find_packages(exclude=["__pycache__", "*.pyc"]),
     package_data={
         "allzparkdemo": package_data
     },

@@ -3,6 +3,7 @@ dist
 *.pyc
 *.egg-info
 __pycache__
+__version__.py
 allzparkdemo/packages/**
 !allzparkdemo/packages/README.md
 

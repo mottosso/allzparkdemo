@@ -21,6 +21,10 @@ os.environ["REZ_PACKAGES_PATH"] = os.pathsep.join([
     packages_path,
 ])
 
+# Prevent e.g. rezutilz from accumulating bad files for the wheel
+os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+sys.dont_write_bytecode = True
+
 # Some packages depend on other packages
 # having been built first.
 order = [
@@ -162,7 +166,7 @@ with stage("Building.. "):
 
         print(" - {name}-{version}".format(**package))
         call("rez build --clean --install "
-             "--prefix %s" % packages_path, cwd=package["base"])
+             "--prefix {0}".format(packages_path), cwd=package["base"])
         count += 1
 
 
@@ -201,7 +205,7 @@ with stage("Making versions.."):
     }
 
     for (family, version), targets in version.items():
-        package = next(iter_packages(family, version))
+        package = next(iter_packages(family, version, paths=[packages_path]))
 
         for dst in targets:
             print("  - {family}=={version} -> {dst}".format(**locals()))
