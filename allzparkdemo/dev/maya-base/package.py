@@ -21,14 +21,7 @@ _environ = {
     "MAYA_DISABLE_CLIC_IPM": "1",
     "MAYA_FORCE_PANEL_FOCUS": "0",
     "MAYA_DEBUG_SIGTERM_AS_SIGINT": "1",
-    "MAYA_COLOR_MANAGEMENT_POLICY_LOCK": "1",
     "MAYA_RENDER_SETUP_INCLUDE_ALL_LIGHTS": "0",
-
-    # General scripts and shelves
-    "MAYA_COLOR_MANAGEMENT_POLICY_FILE": [
-        "{root}/maya/color_management"
-        "/default_synColorConfig.xml"
-    ],
 
     "PYTHONPATH": [
         "{root}/maya/scripts",
@@ -42,8 +35,6 @@ _environ = {
     "MAYA_SCRIPT_PATH": [
         "{root}/maya/scripts",
     ],
-
-    "MAYA_SHELF_PATH": "{root}/maya/shelves",
 
     "XBMLANGPATH": [
         "{root}/maya/shelves/icons"

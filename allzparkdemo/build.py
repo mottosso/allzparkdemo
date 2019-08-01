@@ -210,12 +210,13 @@ with stage("Making versions.."):
         for dst in targets:
             print("  - {family}=={version} -> {dst}".format(**locals()))
 
-            copy_package(
+            result = copy_package(
                 package=package,
-                variants=[0],
                 dest_version=dst,
                 dest_repository=packages_path,
             )
+
+            assert not result["skipped"], (packages_path, package, dst)
 
             count += 1
 

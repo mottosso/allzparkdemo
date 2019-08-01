@@ -35,7 +35,6 @@ def commands():
     exes = ["maya", "mayapy", "mayabatch", "render"]
     ext = ""
     version = "2018"
-    print(this.version, type(this.version))
 
     # Edit these to support more versions of Maya
     if os.name == "nt":
@@ -50,7 +49,9 @@ def commands():
 
     if os.path.exists(bindir):
         for exe in exes:
-            alias(exe, os.path.join(bindir, exe + ext))
+            fname = os.path.join(bindir, exe + ext)
+            fname = fname.replace(" ", "` ")  # Escape spaces for PowerShell
+            alias(exe, fname)
 
     else:
         if system.platform == "windows":
