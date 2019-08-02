@@ -25,6 +25,7 @@ packagedir = os.path.abspath(os.path.join(here, "allzparkdemo"))
 
 exclude = [
     "__pycache__",
+    ".rxt",
 ]
 
 package_data = []
@@ -34,6 +35,9 @@ for base, dirs, files in os.walk(packagedir):
     basename = os.path.basename(base)
 
     for fname in files:
+        if any(fname.endswith(pat) for pat in exclude):
+            continue
+
         fname = os.path.join(relpath, fname)
         package_data += [fname]
 
