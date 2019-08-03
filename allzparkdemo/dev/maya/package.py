@@ -32,9 +32,16 @@ def commands():
     global alias
     global system
 
+    # Some basic Maya hygene
+    env["MAYA_DISABLE_CLIC_IPM"] = "Yes"  # Disable the AdSSO process
+    env["MAYA_DISABLE_CIP"] = "Yes"       # Shorten time to boot
+    env["MAYA_DISABLE_CER"] = "Yes"
+    env["PYMEL_SKIP_MEL_INIT"] = "Yes"
+    env["LC_ALL"] = "C"                   # Mute color management warnings
+
     exes = ["maya", "mayapy", "mayabatch", "render"]
     ext = ""
-    version = "2018"
+    version = str(this.version).split(".", 1)[0]
 
     # Edit these to support more versions of Maya
     if os.name == "nt":
