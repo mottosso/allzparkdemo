@@ -1,12 +1,12 @@
 name = "mgear"
-version = "2.4.2"
+version = "2.4.3"
 
 
 build_command = "python -m rezutil {root}"
 private_build_requires = ["rezutil-1",]
 
 requires = [
-    "~maya>=2016,<2019",
+    "~maya>=2016,<2020",
 ]
 
 _environ = {
